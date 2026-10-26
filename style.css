@@ -1,0 +1,40 @@
+:root{--ink:#12303B;--mint:#E6F4EC;--sun:#FFB42E;--blue:#2E7FD9;--white:#fff;--line:#C9E2D5}
+*{box-sizing:border-box}
+body{margin:0;font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:var(--mint);line-height:1.5}
+h1,h2,.logo{font-family:Fredoka,sans-serif}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:var(--ink);color:#fff;position:sticky;top:0;z-index:5}
+.logo{font-size:1.4rem;font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:var(--sun);font-weight:500}
+.cart-btn,.pay,.add{border:0;cursor:pointer;font:inherit;font-weight:700;border-radius:999px}
+.cart-btn{background:var(--sun);color:var(--ink);padding:8px 18px}
+.hero{padding:48px 5vw 20px;max-width:900px}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);line-height:1.05;margin:0 0 12px}
+.hero p{max-width:52ch;margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:2px solid var(--ink);background:transparent;color:var(--ink);padding:6px 16px;border-radius:999px;font:inherit;font-weight:700;cursor:pointer}
+.chip.on{background:var(--ink);color:#fff}
+main{padding:10px 5vw 60px}
+.notice{background:#FFF2CF;border-left:4px solid var(--sun);padding:10px 14px;border-radius:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card .pic{aspect-ratio:4/3;background:#D3EBDD;display:grid;place-items:center;font-size:3.4rem}
+.card img{width:100%;height:100%;object-fit:cover}
+.card .body{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card h3{margin:0;font-size:1.05rem}
+.card .desc{font-size:.9rem;opacity:.8;flex:1}
+.price{font-weight:700;color:var(--blue);font-size:1.1rem}
+.add{background:var(--ink);color:#fff;padding:9px;margin-top:8px}
+.add:hover,.pay:hover{background:var(--blue)}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);background:#fff;padding:18px;overflow:auto;transform:translateX(100%);transition:transform .25s;z-index:10;box-shadow:-8px 0 30px rgba(0,0,0,.15)}
+.drawer.open{transform:none}
+.drawer-head{display:flex;justify-content:space-between;align-items:center}
+.drawer-head button{border:0;background:none;font-size:1.2rem;cursor:pointer}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--line)}
+.qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--ink);background:#fff;cursor:pointer}
+form{display:grid;gap:8px}
+input,textarea{font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px}
+.pay{background:var(--blue);color:#fff;padding:12px}
+.pay:disabled{opacity:.6}
+.msg{color:#B3261E;margin:0}
+.total{font-size:1.1rem}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}

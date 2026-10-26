@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wagtail Pet Supplies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#">Wagtail <span>Pet Supplies</span></a>
+  <button id="cartBtn" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
+</header>
+
+<section class="hero">
+  <h1>Good things for good pets.</h1>
+  <p>Food, toys and care for dogs, cats and small friends. Pay online with GCash, Maya or card.</p>
+  <div class="filters" id="filters">
+    <button class="chip on" data-cat="all">All</button>
+    <button class="chip" data-cat="dog">Dogs</button>
+    <button class="chip" data-cat="cat">Cats</button>
+    <button class="chip" data-cat="small">Small pets</button>
+  </div>
+</section>
+
+<main>
+  <p id="notice" class="notice" hidden></p>
+  <div id="grid" class="grid"></div>
+</main>
+
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-head"><h2>Your cart</h2><button id="closeCart" aria-label="Close cart">✕</button></div>
+  <div id="cartItems"></div>
+  <p class="total">Total: <strong id="cartTotal">₱0.00</strong></p>
+  <form id="checkoutForm" hidden>
+    <input name="name" placeholder="Full name" required>
+    <input name="email" type="email" placeholder="Email" required>
+    <input name="phone" placeholder="Mobile number" required>
+    <textarea name="address" placeholder="Delivery address" rows="2" required></textarea>
+    <button class="pay" id="payBtn">Pay now</button>
+    <p id="formMsg" class="msg"></p>
+  </form>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
